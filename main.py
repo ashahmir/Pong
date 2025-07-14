@@ -63,15 +63,17 @@ while game_on:
         ball.bounce_from_walls()
         score1.score += 1
         score1.update_score()
+
     if ball.xcor() < -350:
         ball.bounce_from_walls()
         score2.score += 1
         score2.update_score()
+
     if ball.ycor() < -290:
         ball.bounce_from_ground()
 
     if ball.ycor() > 290:
-        ball.bounce_from_top()
+        ball.bounce_from_ground()
 
     if ball.xcor() > 0:
         ball.color("blue")
@@ -81,6 +83,7 @@ while game_on:
     if score1.score == target:
         score1.match_win("blue")
         game_on = False
+
     if score2.score == target:
         score2.match_win("red")
         game_on = False
