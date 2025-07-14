@@ -1,4 +1,5 @@
 from turtle import Turtle
+import time
 
 
 class Scoreboard(Turtle):
@@ -18,8 +19,8 @@ class Scoreboard(Turtle):
     def update_score(self):
         self.clear()
         self.write(f"{self.score}", align="center", font=("Michroma", 40, "normal"))
+        time.sleep(1)
 
     def match_win(self, player):
         self.goto(0,-20)
         self.write(f"Player {player} won the match", align="center", font=("Michroma", 20, "normal"))
-
