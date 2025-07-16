@@ -92,3 +92,5 @@ while game_on:
 
 draw_line(game_on)
 screen.exitonclick()
+
+# Credits: a.shahmir
